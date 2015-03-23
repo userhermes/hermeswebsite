@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+<link rel='stylesheet' href='lib/cupertino/jquery-ui.min.css' />
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='css/bootstrapmodal.css' rel='stylesheet' media='print' />
+
+
+		<title>Hermes 2016 - Schedule</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.onvisible.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script src="js/bootstrapmodal.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="code.jquery.com/jquery.js"></script>
+
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			theme: true,
+			defaultView: 'agendaWeek',
+			height: 'auto',
+			allDaySlot: false,
+			minTime: "08:00:00",
+			maxTime: "23:00:00",
+			slotDuration: '00:60:00',
+			header: {
+				left: '',
+				center: 'Preliminary Schedule',
+				right: '',
+			},
+           eventClick: function(event) {
+            var modal = $("#modal");
+            modal.find(".modal-title").html(event.title);            
+            modal.find(".modal-body").html(event.description);
+            modal.modal();
+        },
+			defaultDate: '2016-07-27',			
+			columnFormat: 'ddd Do',
+			editable: false,
+			firstDay: 3,
+			hiddenDays: [ 1, 2 ],
+			eventLimit: true, // allow "more" link when too many events
+			eventTextColor: '#000000',
+			events: [
+				{
+					title: '',
+										description: '',
+					start: '2016-07-27T08:00:00',
+					end: '2016-07-27T18:00:00',
+					color: 'black',
+					rendering: 'background'
+				},
+				{
+					title: '',
+										description: '',
+					start: '2016-07-31T15:30:00',
+					end: '2016-07-31T23:00:00',
+					color: 'black',
+					rendering: 'background'
+				},
+				{
+					align: 'center',
+					title: 'Breakfast',
+										description: '',
+					start: '2016-07-28T08:00:00',
+					end: '2016-07-28T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Breakfast',
+										description: '',
+					start: '2016-07-29T08:00:00',
+					end: '2016-07-29T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Breakfast',
+										description: '',
+					start: '2016-07-30T08:00:00',
+					end: '2016-07-30T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Breakfast',
+										description: '',
+					start: '2016-07-31T08:00:00',
+					end: '2016-07-31T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+										description: '',
+					start: '2016-07-28T12:00:00',
+					end: '2016-07-28T13:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+										description: '',
+					start: '2016-07-29T12:00:00',
+					end: '2016-07-29T13:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+										description: '',
+					start: '2016-07-30T12:00:00',
+					end: '2016-07-30T13:00:00',
+			 		color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+					description: '',
+					start: '2016-07-31T12:00:00',
+					end: '2016-07-31T13:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+										description: '',
+					start: '2016-07-27T19:00:00',
+					end: '2016-07-27T20:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+										description: '',
+					start: '2016-07-28T19:00:00',
+					end: '2016-07-28T20:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+										description: '',
+					start: '2016-07-29T19:00:00',
+					end: '2016-07-29T20:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+					description: '',
+					start: '2016-07-30T19:00:00',
+					end: '2016-07-30T20:00:00',
+			 		color: '#7ACC7A',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Welcome Meeting',
+                description :'<p>You will meet the organisers and your fellow attendees</p><p>You will also be given all the information you need for your stay.</p>',
+					start: '2016-07-27T18:00:00',
+					end: '2016-07-27T19:00:00',
+			 		color: '#FFFF99',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Closing Remarks and Prizegiving',
+					description: '',
+					start: '2016-07-31T11:00:00',
+					end: '2016-07-31T12:00:00',
+			 		color: '#FFFF99',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Initial Mingle',
+                description :'<p>We are busy planning a special event that will help break the ice, allow you to get to know each other and most importantly be fun!</p><p>More details will follow closer to the event.</p>',
+					start: '2016-07-27T20:00:00',
+					end: '2016-07-27T23:00:00',
+			 		color: '#29A3A3',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Closing Party',
+					description: '',
+					start: '2016-07-30T20:00:00',
+					end: '2016-07-30T23:00:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: 'Poster Session and Drinks',
+					description: 'A chance to talk with peers about their research, as well as talk about your own research.',
+					start: '2016-07-29T20:00:00',
+					end: '2016-07-29T23:00:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: '"Free" Mingle',
+					description: '<p>This time will allow participants to mingle and use some of Cumberland Lodge\'s facilities such as the bar, pool table and table tennis.</p>',
+					start: '2016-07-28T20:00:00',
+					end: '2016-07-28T23:00:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: 'Optional: Stroll of Windsor Great Park',
+					description: '<p> Cumberland Lodge is situated within Windsor Great Park, a large royal deer park with a long road to Windsor Castle.</p><p>For those who want to, we will do a walk around the extensive grounds, depending on keenness we could walk to Windsor Castle. </p><img src="images/wgp.jpg" style="width: 100%;" />',
+					start: '2016-07-31T13:00:00',
+					end: '2016-07-31T15:30:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: 'Group Work on Task',
+					description: 'Organisers will be distibuted to help as groups work on the communication task. Speakers will also be around to discuss and offer guidance.',
+					start: '2016-07-28T18:00:00',
+					end: '2016-07-28T19:00:00',
+			 		color: '#FF8F45',
+
+				},
+				{
+					title: 'Group Work on Task',
+										description: 'Organisers will be distibuted to help as groups work on the communication task. Speakers will also be around to discuss and offer guidance.',
+					start: '2016-07-29T16:00:00',
+					end: '2016-07-29T19:00:00',
+			 		color: '#FF8F45',
+
+				},
+				{
+					title: 'Group Work on Task',
+										description: 'Organisers will be distibuted to help as groups work on the communication task. Speakers will also be around to discuss and offer guidance.',
+					start: '2016-07-30T14:30:00',
+					end: '2016-07-30T17:00:00',
+			 		color: '#FF8F45',
+
+				},
+				{
+					title: 'Group Work Presentations',
+										description: '<p>Groups will present their completed projects to a panel of judges, judges will provide constructive feedback.</p> <p>We are currently looking into ways to maximise what the participants gain from this, as such more details will be released closer to the date.</p>',
+					start: '2016-07-30T17:00:00',
+					end: '2016-07-30T19:00:00',
+			 		color: '#BD5CBD',
+
+				},
+				{
+					title: 'Giving Engaging Talks',
+					description: '<p><a href="speakers.html#vitelli">Piero Vitelli</a> will deliver a seminar on the tatics you can use to make presentations more engaging. It will provide practical advice on how to make your talks memorable, entertaining and clear all without destroying your core message.</p><p> More details will be released closer to the date.</p>',
+					start: '2016-07-30T13:00:00',
+					end: '2016-07-30T14:30:00',
+			 		color: '#E65C00',
+
+				},
+				{
+					title: 'Visualisating Data: Technical Session',
+					description: '<p><a href="speakers.html#carter">Craig Carter</a> will take participants through the technical nitty gritty of making data visualisations. This session can be expected to be interactive and informative.</p><p> More details will be released closer to the date.</p>',
+					start: '2016-07-29T13:00:00',
+					end: '2016-07-29T16:00:00',
+			 		color: '#E65C00',
+
+				},
+				{
+					title: 'Visualisating Data: Extracting the Story',
+					description: '<p>This session will aim to tackle how you choose what to extract from your data to turn into your visualisation. </p><p> More details will be released closer to the date.</p>',
+					start: '2016-07-28T16:00:00',
+					end: '2016-07-28T18:00:00',
+			 		color: '#E65C00',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					description: '<p> Masterclass sessions will aim to feature introductory talks in different techniques in multiscale modelling, a flavour of the speaker\'s research, peer-led discussions and industry input on the applications of the techniques.  </p><p> More details to follow closer to the event.</p>',
+					start: '2016-07-28T09:00:00',
+					end: '2016-07-28T12:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					description: '<p> Masterclass sessions will aim to feature introductory talks in different techniques in multiscale modelling, a flavour of the speaker\'s research, peer-led discussions and industry input on the applications of the techniques.  </p><p> More details to follow closer to the event.</p>',
+					start: '2016-07-28T13:00:00',
+					end: '2016-07-28T16:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					description: '<p> Masterclass sessions will aim to feature introductory talks in different techniques in multiscale modelling, a flavour of the speaker\'s research, peer-led discussions and industry input on the applications of the techniques.  </p><p> More details to follow closer to the event.</p>',
+					start: '2016-07-29T09:00:00',
+					end: '2016-07-29T12:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+				   description: '<p> Masterclass sessions will aim to feature introductory talks in different techniques in multiscale modelling, a flavour of the speaker\'s research, peer-led discussions and industry input on the applications of the techniques.  </p><p> More details to follow closer to the event.</p>',
+					start: '2016-07-30T09:00:00',
+					end: '2016-07-30T12:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Keynote Talk',
+										description: '',
+					start: '2016-07-31T09:00:00',
+					end: '2016-07-31T11:00:00',
+			 		color: '#CC0000',
+
+				}
+			]
+		});
+		
+	});
+
+</script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar" id="schedule">
+
+		<!-- Header -->
+			<div id="header">
+
+				<!-- Inner -->
+					<div class="inner">
+						<header>
+							<h1><a href="index.html" id="logo" >Schedule</a></h1>
+						</header>
+					</div>
+				
+				<!-- Nav -->
+		<nav id="nav">
+                <ul>
+                    <li><a href="index.html" id="homenav">Home</a></li>
+                    <li><a href="about.html" id="aboutnav">About</a></li>
+						  <li><a href="#">Next Event</a>
+								<ul>
+								<li>	<a href="speakers.html" id="speakersnav">Speakers</a></li>
+                    <li><a href="schedule.html" id="schedulenav">Schedule</a></li>
+                    <li><a href="team.html" id="teamnav">Team</a></li>
+                    <li><a href="apply.html" id="applynav">Apply</a></li>
+										</ul>
+									</li>
+									
+                   <!-- <li><a href="speakers.html" id="speakersnav">Speakers</a></li>
+                    <li><a href="schedule.html" id="schedulenav">Schedule</a></li>
+                    <li><a href="team.html" id="teamnav">Team</a></li>
+                    <li><a href="apply.html" id="applynav">Apply</a></li>-->
+                    <li><a href="previousevents.html" id="previouseventsnav">Previous Events</a></li>
+                    
+                </ul>
+                </li>
+            </nav>
+
+			</div>
+			
+		<!-- Main -->
+		
+			<div class="wrapper style1">
+
+				<div class="container">
+					<article id="main" class="special">
+						<header>
+							<p>
+								The Hermes Summer School 2016 will take place between 27th - 31st July, 2016 at Cumberland Lodge in Windsor Great Park, UK. Below is a preliminary schedule. Please note that breaks during masterclasses are not shown.
+							</p>
+						</header>
+              
+<a href="#modal">	<div id='calendar'></div></a>
+
+
+<div class="modal" role="dialog" id="modal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#close"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"  >&times;</button></a>
+                <h4 class="modal-title" style="font-weight: bold;     font-size: 120%;">Click on events for more information</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<span style='color: #FFFF99; font-size: 200%'>&#x25CF;</span>: Administrative <span style='color: #AC3030;  font-size: 200%'>&#x25CF;</span>: Materials Modelling Talks and Seminars
+<span style='color: #CC0000; font-size: 200%'>&#x25CF;</span>: Keynote
+<span style='color: #E65C00;  font-size: 200%'>&#x25CF;</span>: Communication Talks and Seminars
+<span style='color: #FF8F45; font-size: 200%'>&#x25CF;</span>: Communication Group Work <span style='color: #BD5CBD;  font-size: 200%'>&#x25CF;</span>: Presentation of Group Task
+<span style='color: #29A3A3; font-size: 200%'>&#x25CF;</span>: Networking and Social
+<span style='color: #7ACC7A; font-size: 200%'>&#x25CF;</span>: Food
+<p>
+                    </article>
+<hr>
+
+<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>Contact us!</h3>
+									</header>
+									<p>Email: contactus@hermessummerschool.org </p>
+									<ul class="icons">
+										<li><a href="https://twitter.com/hermes_comms" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/hermessummerschool" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										
+										<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</section>
+
+
+				</div>
+
+			</div>
+         
+	</body>
+</html>

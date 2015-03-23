@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+<link rel='stylesheet' href='lib/cupertino/jquery-ui.min.css' />
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='css/bootstrapmodal.css' rel='stylesheet' media='print' />
+
+
+		<title>Hermes 2016 - Schedule</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.onvisible.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script src="js/bootstrapmodal.min.js"></script>
+<script src="code.jquery.com/jquery.js"></script>
+
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			theme: true,
+			defaultView: 'agendaWeek',
+			height: "auto",
+			allDaySlot: false,
+			minTime: "08:00:00",
+			maxTime: "23:00:00",
+			slotDuration: '01:00:00',
+			header: {
+				left: '',
+				center: 'Preliminary Schedule',
+				right: '',
+			},
+            eventClick:  function(event, jsEvent, view) {
+            $('#modalTitle').html(event.title);
+            $('#modalBody').html(event.description);
+            $('#eventUrl').attr('href',event.url);
+            $('#fullCalModal').modal();},
+			defaultDate: '2016-07-27',			
+			columnFormat: 'ddd Do',
+			editable: false,
+			firstDay: 3,
+			hiddenDays: [ 1, 2 ],
+			eventLimit: true, // allow "more" link when too many events
+			eventTextColor: '#000000',
+			events: [
+				{
+					title: '',
+					start: '2016-07-27T08:00:00',
+					end: '2016-07-27T18:00:00',
+					color: 'black',
+					rendering: 'background'
+				},
+				{
+					title: '',
+					start: '2016-07-31T15:30:00',
+					end: '2016-07-31T23:00:00',
+					color: 'black',
+					rendering: 'background'
+				},
+				{
+					align: 'center',
+					title: 'Breakfast',
+					start: '2016-07-28T08:00:00',
+					end: '2016-07-28T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Breakfast',
+					start: '2016-07-29T08:00:00',
+					end: '2016-07-29T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Breakfast',
+					start: '2016-07-30T08:00:00',
+					end: '2016-07-30T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Breakfast',
+					start: '2016-07-31T08:00:00',
+					end: '2016-07-31T09:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-28T12:00:00',
+					end: '2016-07-28T13:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-29T12:00:00',
+					end: '2016-07-29T13:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-30T12:00:00',
+					end: '2016-07-30T13:00:00',
+			 		color: '#7ACC7A'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-31T12:00:00',
+					end: '2016-07-31T13:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-27T19:00:00',
+					end: '2016-07-27T20:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-28T19:00:00',
+					end: '2016-07-28T20:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-29T19:00:00',
+					end: '2016-07-29T20:00:00',
+					color: '#7ACC7A'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-30T19:00:00',
+					end: '2016-07-30T20:00:00',
+			 		color: '#7ACC7A',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Welcome Meeting',
+                    description :'<p>This is just a fake description for the Free Pizza.</p><p>Nothing to see!</p>',
+					start: '2016-07-27T18:00:00',
+					end: '2016-07-27T19:00:00',
+			 		color: '#FFFF99',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Closing Remarks and Prizegiving',
+					start: '2016-07-31T11:00:00',
+					end: '2016-07-31T12:00:00',
+			 		color: '#FFFF99',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Initial Mingle',
+					start: '2016-07-27T20:00:00',
+					end: '2016-07-27T23:00:00',
+			 		color: '#29A3A3',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Closing Party',
+					start: '2016-07-30T20:00:00',
+					end: '2016-07-30T23:00:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: 'Poster Session and Drinks',
+					start: '2016-07-29T20:00:00',
+					end: '2016-07-29T23:00:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: '"Free" Mingle',
+					start: '2016-07-28T20:00:00',
+					end: '2016-07-28T23:00:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: 'Optional: Stroll of Windsor Great Park',
+					start: '2016-07-31T13:00:00',
+					end: '2016-07-31T15:30:00',
+			 		color: '#29A3A3',
+
+				},
+				{
+					title: 'Group Work on Task',
+					start: '2016-07-28T18:00:00',
+					end: '2016-07-28T19:00:00',
+			 		color: '#FF8F45',
+
+				},
+				{
+					title: 'Group Work on Task',
+					start: '2016-07-29T16:00:00',
+					end: '2016-07-29T19:00:00',
+			 		color: '#FF8F45',
+
+				},
+				{
+					title: 'Group Work on Task',
+					start: '2016-07-30T14:30:00',
+					end: '2016-07-30T17:00:00',
+			 		color: '#FF8F45',
+
+				},
+				{
+					title: 'Group Work Presentations',
+					start: '2016-07-30T17:00:00',
+					end: '2016-07-30T19:00:00',
+			 		color: '#BD5CBD',
+
+				},
+				{
+					title: 'Giving Engaging Talks',
+					start: '2016-07-30T13:00:00',
+					end: '2016-07-30T14:30:00',
+			 		color: '#E65C00',
+
+				},
+				{
+					title: 'Visualisating Data: Technical Session',
+					start: '2016-07-29T13:00:00',
+					end: '2016-07-29T16:00:00',
+			 		color: '#E65C00',
+
+				},
+				{
+					title: 'Visualisating Data: Extracting the Story',
+					start: '2016-07-28T16:00:00',
+					end: '2016-07-28T18:00:00',
+			 		color: '#E65C00',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					start: '2016-07-28T09:00:00',
+					end: '2016-07-28T12:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					start: '2016-07-28T13:00:00',
+					end: '2016-07-28T16:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					start: '2016-07-29T09:00:00',
+					end: '2016-07-29T12:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Materials Modelling Masterclass',
+					start: '2016-07-30T09:00:00',
+					end: '2016-07-30T12:00:00',
+			 		color: '#AC3030',
+
+				},
+				{
+					title: 'Keynote Talk',
+					start: '2016-07-31T09:00:00',
+					end: '2016-07-31T11:00:00',
+			 		color: '#CC0000',
+
+				}
+			]
+		});
+		
+	});
+
+</script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar" id="schedule">
+
+		<!-- Header -->
+			<div id="header">
+
+				<!-- Inner -->
+					<div class="inner">
+						<header>
+							<h1><a href="index.html" id="logo" >Schedule</a></h1>
+						</header>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html" id="homenav">Home</a></li>
+							<li><a href="about.html" id="aboutnav">About</a></li>
+							<li><a href="speakers.html" id="speakersnav">Speakers</a></li>
+							<li><a href="schedule.html" id="schedulenav">Schedule</a></li>
+							<li><a href="team.html" id="teamnav">Team</a></li>
+							<li><a href="apply.html" id="applynav">Apply</a></li>
+							<li><a href="previousevents.html" id="previouseventsnav">Previous Events</a></li>
+							<li><a href="partners.html" id="partnersnav">Partners</a></li>
+						</ul>
+					</nav>
+
+			</div>
+			
+		<!-- Main -->
+		
+			<div class="wrapper style1">
+
+				<div class="container">
+					<article id="main" class="special">
+						<header>
+							<p>
+								The Hermes Summer School 2016 will take place between 27th - 31st July, 2016 at Cumberland Lodge in Windsor Great Park, UK. Below is a preliminary schedule. Please note that breaks during masterclasses are not shown.
+							</p>
+						</header>
+              
+	<div id='calendar'></div>
+<span style='color: #FFFF99; font-size: 200%'>&#x25CF;</span>: Administrative <span style='color: #AC3030;  font-size: 200%'>&#x25CF;</span>: Materials Modelling Talks and Seminars
+<span style='color: #CC0000; font-size: 200%'>&#x25CF;</span>: Keynote
+<span style='color: #E65C00;  font-size: 200%'>&#x25CF;</span>: Communication Talks and Seminars
+<span style='color: #FF8F45; font-size: 200%'>&#x25CF;</span>: Communication Group Work <span style='color: #BD5CBD;  font-size: 200%'>&#x25CF;</span>: Presentation of Group Task
+<span style='color: #29A3A3; font-size: 200%'>&#x25CF;</span>: Networking and Social
+<span style='color: #7ACC7A; font-size: 200%'>&#x25CF;</span>: Food
+<p>
+                    </article>
+<hr>
+
+<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>Contact us!</h3>
+									</header>
+									<p>Email: contactus@hermessummerschool.org </p>
+									<ul class="icons">
+										<li><a href="https://twitter.com/hermes_comms" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/hermessummerschool" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										
+										<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</section>
+
+
+				</div>
+
+			</div>
+          <div id="fullCalModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 id="modalTitle" class="modal-title"></h4>
+                                    </div>
+                                    <div id="modalBody" class="modal-body"></div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+	</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link rel='stylesheet' href='../lib/cupertino/jquery-ui.min.css' />
+<link href='../fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			theme: true,
+			defaultView: 'agendaWeek',
+			allDaySlot: false,
+			height: "auto",
+			minTime: "08:00:00",
+			maxTime: "23:00:00",
+			header: {
+				left: '',
+				center: 'Preliminary Schedule',
+				right: '',
+			},
+			defaultDate: '2016-07-27',			
+			columnFormat: 'dddd Do',
+			editable: false,
+			firstDay: 3,
+			hiddenDays: [ 1, 2 ],
+			eventLimit: true, // allow "more" link when too many events
+			eventTextColor: '#000000',
+			events: [
+				{
+					title: '',
+					start: '2016-07-27T08:00:00',
+					end: '2016-07-27T18:00:00',
+					color: 'black',
+					rendering: 'background'
+				},
+				{
+					title: '',
+					start: '2016-07-31T15:30:00',
+					end: '2016-07-31T23:00:00',
+					color: 'black',
+					rendering: 'background'
+				},
+				{
+					align: 'center',
+					title: 'Breakfast',
+					start: '2016-07-28T08:00:00',
+					end: '2016-07-28T09:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Breakfast',
+					start: '2016-07-29T08:00:00',
+					end: '2016-07-29T09:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Breakfast',
+					start: '2016-07-30T08:00:00',
+					end: '2016-07-30T09:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Breakfast',
+					start: '2016-07-31T08:00:00',
+					end: '2016-07-31T09:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-28T12:00:00',
+					end: '2016-07-28T13:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-29T12:00:00',
+					end: '2016-07-29T13:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-30T12:00:00',
+					end: '2016-07-30T13:00:00',
+			 		color: '#FF6666'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-31T12:00:00',
+					end: '2016-07-31T13:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-27T19:00:00',
+					end: '2016-07-27T20:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-28T19:00:00',
+					end: '2016-07-28T20:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-29T19:00:00',
+					end: '2016-07-29T20:00:00',
+					color: '#FF6666'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-07-30T19:00:00',
+					end: '2016-07-30T20:00:00',
+			 		color: '#FF6666',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Welcome Meeting',
+					start: '2016-07-27T18:00:00',
+					end: '2016-07-27T19:00:00',
+			 		color: '#FFFF99',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Closing Remarks and Prizegiving',
+					start: '2016-07-31T11:00:00',
+					end: '2016-07-31T12:00:00',
+			 		color: '#FFFF99',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Initial Mingle',
+					start: '2016-07-27T20:00:00',
+					end: '2016-07-27T23:00:00',
+			 		color: '#29A3A3',
+			 		textColor: '#000000'
+				},
+				{
+					title: 'Closing Party',
+					start: '2016-07-30T20:00:00',
+					end: '2016-07-30T23:00:00',
+			 		color: '#29A3A3',
+
+				}
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
